@@ -1,0 +1,171 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.10
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://hariyoilam.shop/ [92.112.189.218]
+[32m[+][0m Started: Sun Dec  1 18:06:09 2024
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - x-powered-by: PHP/8.2.22
+ |  - x-litespeed-cache: hit
+ |  - server: LiteSpeed
+ |  - platform: hostinger
+ |  - panel: hpanel
+ |  - content-security-policy: upgrade-insecure-requests
+ |  - alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000, h3-Q050=":443"; ma=2592000, h3-Q046=":443"; ma=2592000, h3-Q043=":443"; ma=2592000, quic=":443"; ma=2592000; v="43,46"
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: https://hariyoilam.shop/robots.txt
+ | Interesting Entries:
+ |  - /wp-content/uploads/wc-logs/
+ |  - /wp-content/uploads/woocommerce_transient_files/
+ |  - /wp-content/uploads/woocommerce_uploads/
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m WordPress readme found: https://hariyoilam.shop/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m A backup directory has been found: https://hariyoilam.shop/wp-content/backup-db/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 70%
+ | Reference: https://github.com/wpscanteam/wpscan/issues/422
+
+[32m[+][0m This site has 'Must Use Plugins': https://hariyoilam.shop/wp-content/mu-plugins/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 80%
+ | Reference: http://codex.wordpress.org/Must_Use_Plugins
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://hariyoilam.shop/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+
+Fingerprinting the version -: |===========================================================================================================================================================================================================|
+[34m[i][0m The WordPress version could not be detected.
+
+[32m[+][0m WordPress theme in use: astra
+ | Location: https://hariyoilam.shop/wp-content/themes/astra/
+ | Last Updated: 2024-11-26T00:00:00.000Z
+ | Readme: https://hariyoilam.shop/wp-content/themes/astra/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 4.8.7
+ | Style URL: https://hariyoilam.shop/wp-content/themes/astra/style.css
+ | Style Name: Astra
+ | Style URI: https://wpastra.com/
+ | Description: Astra is fast, fully customizable & beautiful WordPress theme suitable for blog, personal portfolio,...
+ | Author: Brainstorm Force
+ | Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 4.8.6 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://hariyoilam.shop/wp-content/themes/astra/style.css, Match: 'Version: 4.8.6'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+[32m[+][0m Checking Plugin Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m astra-sites
+ | Location: https://hariyoilam.shop/wp-content/plugins/astra-sites/
+ | Latest Version: 4.4.8 (up to date)
+ | Last Updated: 2024-11-15T10:11:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 4.4.8 (80% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/astra-sites/readme.txt
+
+[32m[+][0m elementor
+ | Location: https://hariyoilam.shop/wp-content/plugins/elementor/
+ | Last Updated: 2024-11-24T15:04:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 3.25.10
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 3.25.7 (100% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.7
+ |  - https://hariyoilam.shop/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.7
+ | Confirmed By:
+ |  Readme - Stable Tag (Aggressive Detection)
+ |   - https://hariyoilam.shop/wp-content/plugins/elementor/readme.txt
+ |  Readme - ChangeLog Section (Aggressive Detection)
+ |   - https://hariyoilam.shop/wp-content/plugins/elementor/readme.txt
+
+[32m[+][0m elementor-pro
+ | Location: https://hariyoilam.shop/wp-content/plugins/elementor-pro/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 3.25.2 (80% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.25.2
+ |  - https://hariyoilam.shop/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.25.2
+ | Confirmed By: Change Log (Aggressive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/elementor-pro/changelog.txt, Match: '#### 3.25.2 -'
+
+[32m[+][0m woocommerce
+ | Location: https://hariyoilam.shop/wp-content/plugins/woocommerce/
+ | Last Updated: 2024-11-19T16:31:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 9.4.2
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Meta Generator (Passive Detection)
+ |
+ | Version: 9.4.1 (100% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.4.1
+ |  - https://hariyoilam.shop/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.4.1
+ |  - https://hariyoilam.shop/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=9.4.1
+ | Confirmed By:
+ |  Meta Generator (Passive Detection)
+ |   - https://hariyoilam.shop/, Match: 'WooCommerce 9.4.1'
+ |  Readme - ChangeLog Section (Aggressive Detection)
+ |   - https://hariyoilam.shop/wp-content/plugins/woocommerce/readme.txt
+
+[32m[+][0m woocommerce-gateway-stripe
+ | Location: https://hariyoilam.shop/wp-content/plugins/woocommerce-gateway-stripe/
+ | Latest Version: 8.9.0 (up to date)
+ | Last Updated: 2024-11-14T21:26:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 8.9.0 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/woocommerce-gateway-stripe/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://hariyoilam.shop/wp-content/plugins/woocommerce-gateway-stripe/readme.txt
+
+[33m[!][0m No WPVulnDB API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Sun Dec  1 18:06:21 2024
+[32m[+][0m Requests Done: 704
+[32m[+][0m Cached Requests: 623
+[32m[+][0m Data Sent: 176.857 KB
+[32m[+][0m Data Received: 327.487 KB
+[32m[+][0m Memory used: 281.547 MB
+[32m[+][0m Elapsed time: 00:00:11
